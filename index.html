@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Как писать интерфейсные надписи</title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="node_modules/shower-ribbon/styles/screen-16x10.css">
+	<link rel="icon" type="image/png" sizes="192x192"  href="http://igorshevchenko.ru/static/css/icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="http://igorshevchenko.ru/static/css/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="http://igorshevchenko.ru/static/css/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="http://igorshevchenko.ru/static/css/icons/favicon-16x16.png">
+	<style>
+		.shower.list {
+			background: url(style/texture.png); /* pattern from https://www.toptal.com/designers/subtlepatterns/seamless-paper-texture/ */
+		}
+
+		.caption {
+			color: #000000;
+		}
+			.caption a {
+				color: #1873d0;
+			}
+
+		div.caption {
+			padding-bottom: 0.45em;
+		}
+
+		.slide {
+			font-size: 35px;
+			line-height: 1.75em;
+		}
+
+		.slide::after {
+			visibility: hidden;
+		}
+		
+		.slide .shout {
+			font-size: 120px;
+		}
+		
+		.at-bottom {
+			position: absolute;
+			bottom: 0;
+		}
+		
+		.red {
+			color: #d9534f!important;
+		}
+
+		.orange {
+			color: #f0ad4e!important;
+		}
+
+		.green {
+			color: #5cb85c!important;
+		}
+
+		h2.box {
+			background-color: rgba(255, 255, 255, 0.7);
+			padding: 30px;
+			margin-top: -30px;
+			display: inline-block;
+		}
+	</style>
+</head>
+<body class="shower list">
+	<header class="caption">
+		<h1>Как писать интерфейсные надписи</h1>
+		<p><a href="http://igorshevchenko.ru">Игорь Шевченко</a>, <a href="https://antidasoftware.com/">Antida software</a></p>
+	</header>
+
+	<section class="slide" id="cover">
+		<div id="title" class="at-bottom">
+			<h2>Как писать интерфейсные надписи</h2>
+			<p>Игорь Шевченко, Antida software</a></p>
+		</div>
+		<img class="cover" src="images/_cover.png">
+		<style>
+			#cover h2 {
+				margin:30px 0 0;
+				color:#FFF;
+				text-align:center;
+				font-size:70px;
+				}
+			#cover p {
+				margin:10px 0 0;
+				text-align:center;
+				color:#FFF;
+				font-style:italic;
+				font-size:20px;
+				}
+				#cover p a {
+					color:#FFF;
+					}
+			#cover img {
+				max-height: none;
+			}
+			#title {
+				left: 0;
+				width: 100%;
+				background-image: -webkit-gradient(
+					linear, left bottom, left top, from(rgba(0,0,0,0.9)),
+					to(rgba(0,0,0,0)), color-stop(.5,#333333)
+				);
+				padding-bottom: 30px;
+				padding-top: 40px;
+			}
+		</style>
+	</section>
+
+	<section class="slide">
+		<h2>Обо мне</h2>
+		<img src="images/antida-small.png" id="antida">
+		<p>Работаю в Antida software (Челябинск).</p>
+		<p>Пишу код на фронтенде и бэкенде.</p>
+		<style>
+			#antida {
+				float: right;
+			}
+		</style>
+	</section>
+
+	<section class="slide">
+		<h2>Типичная задача</h2>
+		<blockquote><p>
+			Добавить на страницу с отчетом возможность отправить csv-версию отчета на почту текущему пользователю
+			</p></blockquote>
+	</section>
+
+	<section class="slide">
+		<h2>Нужно писать тексты</h2>
+		<ol>
+			<li class="next">Надпись на кнопке</li>
+			<li class="next">Тема и тело письма</li>
+			<li class="next">Сообщение о том, что письмо отправлено.</li>
+			<li class="next">Сообщение об ошибке, если не получилось отправить письмо.</li>
+		</ol>
+	</section>
+
+	<section class="slide">
+		<h2>Кто будет их писать?</h2>
+		<ul>
+			<li class="next"><strike>Заказчик</strike></li>
+			<li class="next"><strike>UX-копирайтер</strike></li>
+			<li class="next"><strike>Дизайнер</strike></li>
+			<li class="next"><b>Программист</b></li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>У программистов есть задачи поважнее</h2>
+		<ul>
+			<li>Написать оптимальные запросы к БД</li>
+			<li>Разрешить конфликт версий между библиотеками</li>
+			<li>Корректно обрабатывать кодировку файлов</li>
+			<li>Кроссбраузерно сверстать письмо</li>
+			<li class="next"><i>Написать надписи?</i></li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Поэтому надписи получаются плохими :(</h2>
+	</section>
+
+	<section class="slide">
+		<h2>Как писать интерфейсные надписи</h2>
+		<p>Эти советы — для разработчиков.<br>
+		У маркетологов или сеошников свои правила.</p>
+	</section>
+
+	<div class="caption">
+		<h2>Надписи должны быть точными</h2>
+	</div>
+
+	<section class="slide">
+		<h2 class="shout">Надписи должны быть <i>точными</i></h2>
+	</section>
+
+	<section class="slide"><img class="cover" src="images/windows-installer.png" alt=""></section>
+
+	<section class="slide black"><img class="cover" src="images/nordavia.jpg" alt=""></section>
+
+	<section class="slide black"><img class="cover" src="images/google-guidelines.png" alt=""></section>
+
+	<section class="slide black"><img class="cover" src="images/trello-email.png" alt=""></section>
+
+	<div class="caption">
+		<h2>Надписи должны быть полезными</h2>
+	</div>
+
+	<section class="slide">
+		<h2 class="shout">Надписи должны быть <i>полезными</i></h2>
+	</section>
+
+	<section class="slide">
+		<h2 class="red box">Low voltage error</h2>
+		<img class="cover" src="images/low-voltage-error.jpg" alt="">
+	</section>
+
+	<section class="slide">
+		<h2 class="green box">Check power cable</h2>
+		<img class="cover" src="images/low-voltage-error.jpg" alt="">
+	</section>
+
+	<section class="slide"><img class="cover" src="images/windows-phone.jpeg" alt=""></section>
+
+	<section class="slide black"><img class="cover" src="images/mailchimp-login.jpg" alt=""></section>
+
+	<section class="slide black"><img class="cover" src="images/aeroflot-mail.jpg" alt=""></section>
+
+	<section class="slide black"><img class="cover" src="images/online-check-in.jpg" alt=""></section>
+
+	<div class="caption">
+		<h2>Надписи должны быть человечными</h2>
+	</div>
+
+	<section class="slide">
+		<h2 class="shout">Надписи должны быть <i>человечными</i></h2>
+	</section>
+
+	<section class="slide black"><img class="cover" src="images/outlook.jpg" alt=""></section>
+
+	<section class="slide"><img class="cover" src="images/presto-card.jpg" alt=""></section>
+
+	<section class="slide"><img class="cover" src="images/burger-king.jpg" alt=""></section>
+
+	<section class="slide black"><img class="cover" src="images/jira-users.png" alt=""></section>
+
+	<section class="slide black"><img class="cover" src="images/meetup.png" alt=""></section>
+
+	<section class="slide black"><img class="cover" src="images/api-epic-fail.jpg" alt=""></section>
+
+	<div class="caption">
+		<h2>Надписи должны быть короткими</h2>
+	</div>
+
+	<section class="slide">
+		<h2 class="shout">Надписи должны быть <i>короткими</i></h2>
+	</section>
+
+	<section class="slide"><img class="cover" src="images/dropbox-shorten.png" alt=""></section>
+
+	<div class="caption">
+		<h2>Надписи должны быть самодостаточными</h2>
+	</div>
+
+	<section class="slide">
+		<h2 class="shout">Надписи должны быть <i>самодостаточными</i></h2>
+	</section>
+
+	<section class="slide black"><img class="cover" src="images/are-you-sure.jpeg" alt=""></section>
+
+	<section class="slide black"><img class="cover" src="images/save-dialogs.png" alt=""></section>
+
+	<div class="caption">
+		<h2>Надписи должны быть уместными</h2>
+	</div>
+
+	<section class="slide">
+		<h2 class="shout">Надписи должны быть <i>уместными</i></h2>
+	</section>
+
+	<section class="slide black"><img class="cover" src="images/alfa-bank.jpg" alt=""></section>
+
+	<section class="slide black"><img class="cover" src="images/opanki.jpg" alt=""></section>
+
+	<section class="slide">
+		<h2 class="shout">microcopy</h2>
+	</section>
+
+	<section class="slide"><img class="cover" src="images/tumblr.png" alt=""></section>
+
+	<section class="slide black"><img class="cover" src="images/helpscout.png" alt=""></section>
+
+	<section class="slide"><img class="cover" src="images/mailchimp-high-five.png" alt=""></section>
+
+	<section class="slide"><img class="cover" src="images/voice-and-tone.png" alt=""></section>
+
+	<section class="slide">
+		<h2>Когда микрокопия уместна</h2>
+		<ul>
+			<li>Экран загрузки</li>
+			<li>Сообщение об успехе</li>
+			<li>Валидационная ошибка</li>
+			<li>Пример или плейсхолдер</li>
+			<li>Онбординг</li>
+			<li>Пустое состояние</li>
+		</ul>
+	</section>
+
+	<div class="caption">
+		<h2>Надписи должны быть целостными</h2>
+	</div>
+
+	<section class="slide">
+		<h2 class="shout">Надписи должны быть <i>целостными</i></h2>
+	</section>
+
+	<section class="slide"><img class="cover" src="images/dropbox-version-history.png" alt=""></section>
+
+	<section class="slide black"><img class="cover" src="images/google-trends.png" alt=""></section>
+
+	<section class="slide black"><img class="cover" src="images/your-account.jpg" alt=""></section>
+
+	<div class="caption">
+		<h2>Надписи должны быть грамотными</h2>
+	</div>
+
+	<section class="slide">
+		<h2 class="shout">Надписи должны быть <i>грамотными</i></h2>
+	</section>
+
+	<section class="slide">
+		<h2>Надписи должны быть грамотными</h2>
+		<ul>
+			<li class="next">Проверяйтесь</li>
+			<li class="next">Проверяйтесь автоматически (IDE, линтеры)</li>
+			<li class="next">Просите коллег проверить</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>Динамические сообщения</h2>
+		<p class="next red">22 файлов отправлено</p>
+		<p class="next orange">Файлов отправлено: 22</p>
+		<p class="next green">22 файла отправлено</p>
+	</section>
+
+	<div class="caption">
+		<h2>Надписи должны быть необходимыми</h2>
+	</div>
+
+	<section class="slide">
+		<h2 class="shout">Надписи должны быть <i>необходимыми</i></h2>
+	</section>
+
+	<section class="slide black"><img class="cover" src="images/nordavia.jpg" alt="Делайте работу за пользователя. В примере с Артемием Лебедевым и форматом телефона на сайте авиакомпании можно было просто приводить номер к нужному виду внутри системы."></section>
+
+	<section class="slide"><img class="cover" src="images/adobe-esc.jpeg" alt=""></section>
+
+	<section class="slide black"><img class="cover" src="images/falsehoods.jpeg" alt=""></section>
+
+	<section class="slide black"><img class="cover" src="images/date-picker.jpg" alt="Пользуйтесь визуальными средствами для передачи информации. Если блокировать кнопку отправки формы, то не придется выводить сообщение о том, что заполнены не все поля. Если добавить дейтпикер, то не придется требовать ввести дату в правильном формате."></section>
+
+	<div class="caption">
+		<h2>Заключение</h2>
+	</div>
+
+	<section class="slide">
+		<h2>Надписи должны быть</h2>
+		<ol class="compact">
+			<li>Точными</li>
+			<li>Полезными</li>
+			<li>Человечными</li>
+			<li>Короткими</li>
+			<li>Самодостаточными</li>
+			<li>Уместными</li>
+			<li>Целостными</li>
+			<li>Грамотными</li>
+			<li>Необходимыми</li>
+		</ol>
+		<style>
+			.compact li {
+				margin-bottom: -22px;
+			}
+		</style>
+	</section>
+
+	<section class="slide">
+		<h2>Вопросы</h2>
+		<div class="at-bottom">
+			<p>
+				<a href="https://igor-shevchenko.github.io/interface-copy">https://igor-shevchenko.github.io/interface-copy</a>
+				<br>
+				<a href="http://igorshevchenko.ru/blog/entries/interface-copy">http://igorshevchenko.ru/blog/entries/interface-copy
+				<br>
+				<a href="https://twitter.com/igorshevchenko_">https://twitter.com/igorshevchenko_
+			</p>
+		</div>
+	</section>
+
+	<section class="slide">
+		<h2>Спасибо авторам картинок</h2>
+		<ul class="very-compact">
+			<li><a href="http://bureau.ru/bb/soviet/20160405/">http://bureau.ru/bb/soviet/20160405/</a></li>
+			<li><a href="http://ilyabirman.ru/meanwhile/all/aeroflot-registration/">http://ilyabirman.ru/meanwhile/all/aeroflot-registration/</a></li>
+			<li><a href="http://tema.livejournal.com/2301092.html">http://tema.livejournal.com/2301092.html</a></li>
+			<li><a href="http://voiceandtone.com/">http://voiceandtone.com/</a></li>
+			<li><a href="https://medium.com/@johnamwill/please-enter-a-valid-last-name-c63dd5397a2a">https://medium.com/@johnamwill/please-enter-a-valid-last-name-c63dd5397a2a</a></li>
+			<li><a href="https://medium.com/@jsaito/how-to-design-words-63d6965051e9">https://medium.com/@jsaito/how-to-design-words-63d6965051e9</a></li>
+			<li><a href="https://medium.com/@thomasfuchs/how-to-write-an-error-message-883718173322">https://medium.com/@thomasfuchs/how-to-write-an-error-message-883718173322</a></li>
+			<li><a href="https://medium.com/dropbox-design/design-words-with-data-fe3c525994e7">https://medium.com/dropbox-design/design-words-with-data-fe3c525994e7</a></li>
+			<li><a href="https://twitter.com/disablesilence/status/839703430247645184">https://twitter.com/disablesilence/status/839703430247645184</a></li>
+			<li><a href="https://twitter.com/kakurady/status/817419330505863168">https://twitter.com/kakurady/status/817419330505863168</a></li>
+			<li><a href="https://twitter.com/wouldntfix/status/906103200264093697">https://twitter.com/wouldntfix/status/906103200264093697</a></li>
+			<li><a href="https://uxdesign.cc/the-magic-of-microcopy-a56c5decbe1f">https://uxdesign.cc/the-magic-of-microcopy-a56c5decbe1f</a></li>
+			<li><a href="https://www.adaptavist.com/doco/display/F4C/Datepicker">https://www.adaptavist.com/doco/display/F4C/Datepicker</a></li>
+			<li><a href="https://www.smashingmagazine.com/2008/12/10-useful-techniques-to-improve-your-user-interface-designs/">https://www.smashingmagazine.com/2008/12/10-useful-techniques-to-improve-your-user-interface-designs/</a></li>
+			<li><a href="https://www.uxmatters.com/mt/archives/2010/08/avoid-being-embarrassed-by-your-error-messages.php">https://www.uxmatters.com/mt/archives/2010/08/avoid-being-embarrassed-by-your-error-messages.php</a></li>
+			<li><a href="https://uxplanet.org/effective-writing-for-your-ui-things-to-avoid-f6084e94e009">https://uxplanet.org/effective-writing-for-your-ui-things-to-avoid-f6084e94e009</a></li>
+		</ul>
+		<style>
+			.very-compact {
+				font-size: 15px;
+    			line-height: 35px;
+			}
+				.very-compact li {
+					margin-bottom: -10px;
+				}
+		</style>
+	</section>
+
+	<script src="node_modules/shower-core/shower.min.js"></script>
+
+</body>
+</html>
